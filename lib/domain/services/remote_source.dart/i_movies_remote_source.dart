@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 
 abstract class IMoviesRemoteSource {
-  Future<Response> getTrendingMovies({
-    required String timeWindow,
+  Future<Response> getMovies({
+    required String category,
   });
 }

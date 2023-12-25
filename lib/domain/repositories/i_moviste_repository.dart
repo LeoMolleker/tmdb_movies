@@ -1,8 +1,8 @@
 import '../../core/data_state.dart';
-import '../entities/movie_card.dart';
+import '../entities/home_section.dart';
 
 abstract class IMoviesRepository {
-  Future<DataState<List<MovieCard>>> getTrendingMovies({
-    required String timeWindow,
+  Future<DataState<HomeSection>> getMoviesSection({
+    required String category,
   });
 }

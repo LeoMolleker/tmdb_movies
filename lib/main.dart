@@ -37,16 +37,16 @@ class _MyAppState extends State<MyApp> {
         BuildContext context,
         AsyncSnapshot<bool> snapshot,
       ) {
-        print('a');
-        return snapshot.hasData ?
-         MaterialApp(
-          title: 'Flutter Demo',
-          theme: ThemeData(
-            primarySwatch: Colors.blue,
-          ),
-          initialRoute: RoutesConstants.home,
-          routes: _routes.getRoutes(),
-        ) : CircularProgressIndicator();
+        return snapshot.hasData
+            ? MaterialApp(
+                title: 'Flutter Demo',
+                theme: ThemeData(
+                  primarySwatch: Colors.blue,
+                ),
+                initialRoute: RoutesConstants.home,
+                routes: _routes.getRoutes(),
+              )
+            : const CircularProgressIndicator();
       },
     );
   }
